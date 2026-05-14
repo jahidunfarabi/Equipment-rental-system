@@ -5,23 +5,29 @@ A full-stack application for managing equipment rentals, featuring a secure Nest
 ---
 
 ## 📂 Project Structure
-* **`equipment-rental-backend`**: NestJS API handling Authentication, Database (PostgreSQL), and Email services.
-* **`equipment-rental-frontend`**: React/Next.js interface for Customers and Admins.
+
+- **`equipment-rental-backend`**: NestJS API handling Authentication, Database (PostgreSQL), and Email services.
+- **`equipment-rental-frontend`**: React/Next.js interface for Customers and Admins.Also Pusher/beams Testing
 
 ---
 
 ## 🛠 Tech Stack
+
 - **Backend:** NestJS, PostgreSQL, TypeORM.
 - **Security:** Bcrypt (Password Hashing).
 - **Frontend:** React / Next.js.
-- **Testing:** Mailtrap (SMTP Sandbox).
+- **Testing:** Mailtrap (SMTP Sandbox), Pusher(Notification)
 
 ---
 
 ## 🚀 Installation & Setup
 
 ### Backend & Frontend Setup
-```bash
+
+````bash
+###Git clone and get the project
+git clone https://github.com/jahidunfarabi/Equipment-rental-system.git
+
 # Navigate to backend folder
 cd equipment-rental-backend
 
@@ -34,15 +40,6 @@ npm install
 
 # Run in development mode
 npm run start:dev
-
-# Navigate to frontend folder
-cd equipment-rental-frontend
-
-# Install dependencies
-npm install
-
-# Run the development server
-npm run dev
 
 # Navigate to frontend folder
 cd equipment-rental-frontend
@@ -66,16 +63,13 @@ $ npm install -g @nestjs/mau
 
 $ mau deploy
 
-```
+````
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
-
 ## Resources
 
-
 Check out a few resources that may come in handy when working with NestJS:
-
 
 - Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
 
@@ -93,10 +87,6 @@ Check out a few resources that may come in handy when working with NestJS:
 
 - Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
 
-
-
 ## Support
-
-
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
