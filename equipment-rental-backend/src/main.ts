@@ -5,15 +5,19 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // Set global prefix for all routes
+  app.enableCors({
+    origin: 'http://localhost:3001', // Frontend port
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+    credentials: true,
+  });
+
   app.setGlobalPrefix('api');
 
-  // Configure global validation rules
   app.useGlobalPipes(
     new ValidationPipe({
-      whitelist: true, // Strip properties not in DTO
-      forbidNonWhitelisted: true, // Block requests with extra properties
-      transform: true, // Auto-transform payloads to DTO types
+      whitelist: true,
+      forbidNonWhitelisted: true,
+      transform: true,
     }),
   );
 
